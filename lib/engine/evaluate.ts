@@ -1,4 +1,5 @@
 // Rule engine (SPEC §6, §7). Pure: no I/O, no UI.
+import type { Profile, Scheme, DocumentType } from '../types';
 
 export type Status = 'open' | 'closed' | 'paused' | 'unknown';
 export type Verdict = 'likely' | 'check' | 'not_eligible';
@@ -10,49 +11,12 @@ export interface Label {
   te: string;
 }
 
-export interface Profile {
-  state?: 'AP';
-  stage?: 'class1to8' | 'class9to10' | 'inter' | 'iti' | 'diploma' | 'ug' | 'pg' | 'professional';
-  category?: 'SC' | 'ST' | 'BC' | 'EBC' | 'Kapu' | 'Minority' | 'OC';
-  gender?: 'female' | 'male' | 'other';
-  disability?: boolean;
-  incomeBand?: 'lt1L' | '1to2_5L' | '2_5to4_5L' | 'gt4_5L';
-  residence?: 'day' | 'hostel';
-  attendance75?: boolean;
-  childrenInClass1to12?: number;
-  familyAssetRulesOk?: boolean;
-  collegeType?: 'affiliated' | 'private_or_deemed_university' | 'distance';
-  admissionQuota?: 'convener' | 'management_or_spot';
-  class12Top20Percent?: boolean;
-  aicteApproved?: boolean;
-  girlsInFamilyOnPragati?: number;
-}
-
 export interface Rule {
   field: keyof Profile;
   op: Op;
   value?: string | number | string[];
   label: Label;
   orGroup?: string;
-}
-
-export interface Scheme {
-  id: string;
-  state: 'AP' | 'TN' | 'IN';
-  name: Label;
-  status: Status;
-  window: { opens?: string; closes?: string; note?: Label };
-  rules: Rule[];
-  documents: string[];
-  exclusiveWith?: string[];
-  lastVerified: string | null;
-  sourceUrl: string;
-}
-
-export interface DocumentType {
-  id: string;
-  name: Label;
-  typicalDays: number | null;
 }
 
 export interface RuleOutcome {

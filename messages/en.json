@@ -160,5 +160,18 @@
   "checklist.print": "Print",
   "checklist.linkLabel": "Open my checklist",
   "checklist.untimed": "Time varies",
-  "checklist.none": "No documents yet for schemes marked likely eligible or check needed."
+  "checklist.none": "No documents yet for schemes marked likely eligible or check needed.",
+  "track.link": "Track this",
+  "track.title": "My applications",
+  "track.none": "No likely or check schemes to track yet.",
+  "track.statusLabel": "Status",
+  "track.status.not_started": "Not started",
+  "track.status.applied": "Applied",
+  "track.status.approved": "Approved",
+  "track.status.rejected": "Rejected",
+  "track.appliedOn": "Applied on",
+  "track.note": "Note",
+  "track.daysLeft": "days left",
+  "track.closed": "closed",
+  "track.noteHint": "Do not type Aadhaar, bank account or ration card numbers here."
 }

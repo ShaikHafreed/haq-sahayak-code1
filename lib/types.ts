@@ -71,3 +71,11 @@ export interface DocumentType {
   typicalDays: number | null;
   tip?: { en: string; te: string };
 }
+
+export interface TrackedApplication {
+  schemeId: string;
+  status: "not_started" | "applied" | "approved" | "rejected";
+  appliedOn?: string;
+  note?: string;
+}
+

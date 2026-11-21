@@ -87,6 +87,10 @@ export default function SchemeDetail({ scheme, documents }: Props) {
         {t("checklist.linkLabel", lang)}
       </Link>
 
+      <Link href="/track" className={LINK_CLASS}>
+        {t("track.link", lang)}
+      </Link>
+
       <p className="text-sm text-slate-600">{t("results.decision", lang)}</p>
     </div>
   );

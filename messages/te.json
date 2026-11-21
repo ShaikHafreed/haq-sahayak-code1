@@ -160,5 +160,18 @@
   "checklist.print": "ముద్రించు",
   "checklist.linkLabel": "నా చెక్‌లిస్ట్ చూడండి",
   "checklist.untimed": "సమయం మారుతుంది",
-  "checklist.none": "ప్రస్తుతం చూపించడానికి పత్రాలు లేవు."
+  "checklist.none": "ప్రస్తుతం చూపించడానికి పత్రాలు లేవు.",
+  "track.link": "దీన్ని ట్రాక్ చేయండి",
+  "track.title": "నా దరఖాస్తులు",
+  "track.none": "ట్రాక్ చేయడానికి ఇంకా పథకాలు లేవు.",
+  "track.statusLabel": "స్థితి",
+  "track.status.not_started": "ఇంకా మొదలు కాలేదు",
+  "track.status.applied": "దరఖాస్తు చేశాను",
+  "track.status.approved": "ఆమోదం పొందింది",
+  "track.status.rejected": "తిరస్కరించబడింది",
+  "track.appliedOn": "దరఖాస్తు చేసిన తేదీ",
+  "track.note": "గమనిక",
+  "track.daysLeft": "రోజులు మిగిలి ఉన్నాయి",
+  "track.closed": "మూసివేయబడింది",
+  "track.noteHint": "ఇక్కడ ఆధార్, బ్యాంకు ఖాతా లేదా రేషన్ కార్డు నంబర్లు టైప్ చేయవద్దు."
 }

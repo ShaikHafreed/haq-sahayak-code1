@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import schemesJson from '../data/schemes.json';
 import documentsJson from '../data/documents.json';
-import { evaluate, type Scheme, type DocumentType, type Profile, type Verdict } from '../lib/engine/evaluate';
+import { evaluate, type Verdict } from '../lib/engine/evaluate';
+import type { Scheme, DocumentType, Profile } from '../lib/types';
 import { startBy } from '../lib/engine/startBy';
 import { conflictPairs } from '../lib/engine/conflicts';
 import { lakshmi, ravi, saroja } from '../lib/engine/personas';

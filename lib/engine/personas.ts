@@ -1,7 +1,7 @@
 // Sample personas from SPEC §3. Synthetic people, labelled "Sample" in the UI.
 // Only facts SPEC §3 states are mapped; everything else is left undefined (unknown).
 
-import type { Profile } from './evaluate';
+import type { Profile } from '../types';
 
 export const SAMPLE_LABEL = 'Sample' as const;
 

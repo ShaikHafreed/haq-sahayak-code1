@@ -77,6 +77,9 @@ export default function ResultsPage() {
       <Link href="/checklist" className="text-base font-semibold text-teal-800 underline">
         {t("checklist.linkLabel", lang)}
       </Link>
+      <Link href="/track" className="text-base font-semibold text-teal-800 underline">
+        {t("track.link", lang)}
+      </Link>
       <Section title={t("results.group.likely", lang)} items={groups.likely} renderItem={renderItem} />
       <Section title={t("results.group.check", lang)} items={groups.check} renderItem={renderItem} />
       <Section

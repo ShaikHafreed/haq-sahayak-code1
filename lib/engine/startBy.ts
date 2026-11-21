@@ -1,7 +1,7 @@
 // Start-by date (SPEC §7): closeDate − max(typicalDays of documents not yet ready, ignoring null) − 5 days.
 // All date arithmetic is in UTC on ISO dates (YYYY-MM-DD).
 
-import type { DocumentType } from './evaluate';
+import type { DocumentType } from '../types';
 
 export interface StartByResult {
   startBy: string | null; // null when there is no close date or no known typical days

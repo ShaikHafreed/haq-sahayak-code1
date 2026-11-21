@@ -1,6 +1,7 @@
 // Conflicts (SPEC §7): two likely schemes that list each other in exclusiveWith.
 
-import type { Scheme, Verdict } from './evaluate';
+import type { Verdict } from './evaluate';
+import type { Scheme } from '../types';
 
 export interface SchemeResult {
   scheme: Scheme;
