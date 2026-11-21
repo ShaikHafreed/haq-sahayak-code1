@@ -29,7 +29,13 @@ const notoTamil = Noto_Sans_Tamil({
   variable: "--font-noto-tamil",
 });
 
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["500", "600"], display: "swap", variable: "--font-newsreader" });
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-newsreader",
+});
 const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], display: "swap", variable: "--font-plex-mono" });
 
 export const metadata: Metadata = {

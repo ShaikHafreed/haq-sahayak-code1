@@ -122,6 +122,132 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
+/* ---- Landing (PHASE 9.3) ---- */
+.landing-grid-bg {
+  background-color: var(--color-cream);
+  background-image:
+    repeating-linear-gradient(to bottom, var(--color-grid) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(to right, var(--color-grid) 0 1px, transparent 1px 32px);
+}
+
+.landing-display {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 500;
+}
+
+.landing-mono {
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+@keyframes claim-sweep {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Italic word with a marigold highlight that sweeps in once */
+.claim {
+  position: relative;
+  isolation: isolate;
+  font-style: italic;
+}
+
+.claim::before {
+  content: "";
+  position: absolute;
+  left: -0.05em;
+  right: -0.05em;
+  bottom: 0.08em;
+  height: 0.42em;
+  background: var(--color-marigold-soft);
+  z-index: -1;
+  transform-origin: left center;
+  animation: claim-sweep 600ms ease-out both;
+}
+
+/* Staggered entrance: add rise plus one of rise-1..rise-5 */
+.rise {
+  animation: rise-in 240ms ease-out both;
+}
+.rise-1 { animation-delay: 0ms; }
+.rise-2 { animation-delay: 80ms; }
+.rise-3 { animation-delay: 160ms; }
+.rise-4 { animation-delay: 240ms; }
+.rise-5 { animation-delay: 320ms; }
+
+/* Button: teal with a deep-teal fill sweep and a marigold bottom line */
+.btn-fill {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 120ms ease-out;
+}
+
+.btn-fill::before,
+.btn-fill::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+.btn-fill::before {
+  inset: 0;
+  background: var(--color-teal-deeper);
+  transition: transform 420ms ease;
+}
+
+.btn-fill::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--color-marigold-soft);
+  transition: transform 620ms ease;
+}
+
+.btn-fill-arrow {
+  transition: transform 200ms ease;
+}
+
+.btn-fill:hover::before,
+.btn-fill:focus-visible::before,
+.btn-fill:active::before,
+.btn-fill:hover::after,
+.btn-fill:focus-visible::after,
+.btn-fill:active::after {
+  transform: scaleX(1);
+}
+
+.btn-fill:hover .btn-fill-arrow,
+.btn-fill:focus-visible .btn-fill-arrow,
+.btn-fill:active .btn-fill-arrow {
+  transform: translateX(8px);
+}
+
+.btn-fill:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .claim::before,
+  .rise {
+    animation: none;
+  }
+
+  .btn-fill,
+  .btn-fill::before,
+  .btn-fill::after,
+  .btn-fill-arrow {
+    transition: none;
+  }
+}
+
 @media print {
   header,
   footer,

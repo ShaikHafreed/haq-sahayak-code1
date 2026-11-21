@@ -1,17 +1,15 @@
-import ComingNext from "../components/landing/ComingNext";
 import Hero from "../components/landing/Hero";
 import HowItWorks from "../components/landing/HowItWorks";
-import SampleButtons from "../components/landing/SampleButtons";
-import TrustStrip from "../components/landing/TrustStrip";
+import SampleResultCard from "../components/landing/SampleResultCard";
+import SchemesBand from "../components/landing/SchemesBand";
 
+// Full-bleed: escapes layout's max-w-md <main> so only the landing page is wide.
 export default function LandingPage() {
   return (
-    <div className="mx-auto flex max-w-md flex-col gap-8 px-4 pb-10">
-      <Hero />
+    <div className="relative left-1/2 w-screen -translate-x-1/2">
+      <Hero sample={<SampleResultCard />} />
       <HowItWorks />
-      <SampleButtons />
-      <TrustStrip />
-      <ComingNext />
+      <SchemesBand />
     </div>
   );
 }
