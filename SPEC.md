@@ -82,7 +82,7 @@ tests/               engine tests with the 3 personas
 
 ```ts
 type Sector = 'education' | 'agriculture' | 'health';
-type Status = 'open' | 'closed' | 'paused';
+type Status = 'open' | 'closed' | 'paused' | 'unknown'; // unknown = window not confirmed on an official page → show "Check dates on the official portal"
 
 interface Scheme {
   id: string;                 // 'ap-pms-rtf'
@@ -109,6 +109,7 @@ interface Rule {
   op: 'eq' | 'in' | 'lte' | 'gte' | 'true';
   value?: string | number | string[];
   label: { en: string; te: string };   // shown to the user as the reason
+  orGroup?: string;                    // rules sharing an orGroup pass if ANY passes; rules without it must all pass
 }
 
 interface DocumentType {
@@ -141,8 +142,10 @@ interface Profile {            // the ONLY user data we hold
 ## 7. Rule engine contract (`lib/engine/evaluate.ts`)
 
 - `evaluate(profile, scheme) → { status: 'likely' | 'check' | 'not_eligible', rules: { label, result: 'pass' | 'fail' | 'unknown' }[], missingFields: string[] }`
+- Rules with no `orGroup` are AND. Rules sharing an `orGroup` form one OR-group (pass if any rule passes; fail only if all fail; otherwise unknown). Each OR-group counts as one rule.
 - Any `fail` → `not_eligible`. All `pass` → `likely`. Otherwise → `check`, and `missingFields` lists what to ask.
 - A scheme with `status: 'paused'` is shown separately as "Currently paused" even if rules pass.
+- A scheme with `status: 'unknown'` shows "Check dates on the official portal"; `status: 'closed'` shows the closed notice and the window note.
 - Pure function, no I/O, fully unit-tested.
 - `startBy(closeDate, documentIds) = closeDate − max(typicalDays of documents not yet marked ready, ignoring null) − 5 days`. If no close date is known, show the document's typical days only ("takes about 30 days — start early").
 - Conflicts: if two `likely` schemes are marked `exclusiveWith` each other (CSSS vs AP RTF/MTF), show a "Choose one" notice on both cards.

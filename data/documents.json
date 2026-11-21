@@ -1,0 +1,118 @@
+[
+  {
+    "id": "income-cert",
+    "name": {
+      "en": "Income certificate",
+      "te": "ఆదాయ ధృవీకరణ పత్రం"
+    },
+    "issuedBy": {
+      "en": "Village/Ward Secretariat → Deputy Tahsildar/Tahsildar",
+      "te": "గ్రామ/వార్డు సచివాలయం → డిప్యూటీ తహశీల్దార్/తహశీల్దార్"
+    },
+    "typicalDays": 7
+  },
+  {
+    "id": "caste-cert",
+    "name": {
+      "en": "Integrated certificate (caste, nativity, date of birth)",
+      "te": "ఇంటిగ్రేటెడ్ సర్టిఫికేట్ (కులం, స్థానికత, పుట్టిన తేదీ)"
+    },
+    "issuedBy": {
+      "en": "Village/Ward Secretariat → Tahsildar",
+      "te": "గ్రామ/వార్డు సచివాలయం → తహశీల్దార్"
+    },
+    "typicalDays": 30
+  },
+  {
+    "id": "rice-card",
+    "name": {
+      "en": "Rice card",
+      "te": "రైస్ కార్డు"
+    },
+    "issuedBy": {
+      "en": "Held by the family; changes via Village/Ward Secretariat",
+      "te": "కుటుంబం వద్ద ఉంటుంది; మార్పులు గ్రామ/వార్డు సచివాలయం ద్వారా"
+    },
+    "typicalDays": null
+  },
+  {
+    "id": "ssc-memo",
+    "name": {
+      "en": "SSC marks memo",
+      "te": "పదో తరగతి (SSC) మార్కుల మెమో"
+    },
+    "issuedBy": {
+      "en": "School / Board",
+      "te": "పాఠశాల / బోర్డు"
+    },
+    "typicalDays": null
+  },
+  {
+    "id": "class12-marks",
+    "name": {
+      "en": "Class XII marks memo (for CSSS percentile)",
+      "te": "12వ తరగతి మార్కుల మెమో (CSSS పర్సంటైల్ కోసం)"
+    },
+    "issuedBy": {
+      "en": "Board",
+      "te": "బోర్డు"
+    },
+    "typicalDays": null
+  },
+  {
+    "id": "bank-seeded",
+    "name": {
+      "en": "Bank account, Aadhaar-seeded and active",
+      "te": "ఆధార్ అనుసంధానమైన, పని చేస్తున్న బ్యాంకు ఖాతా"
+    },
+    "issuedBy": {
+      "en": "Your bank branch",
+      "te": "మీ బ్యాంకు శాఖ"
+    },
+    "typicalDays": null,
+    "tip": {
+      "en": "Bank details are entered on the portal, never in this app.",
+      "te": "బ్యాంకు వివరాలు పోర్టల్‌లో నమోదు చేయాలి, ఈ యాప్‌లో ఎప్పుడూ కాదు."
+    }
+  },
+  {
+    "id": "aadhaar-card",
+    "name": {
+      "en": "Aadhaar card",
+      "te": "ఆధార్ కార్డు"
+    },
+    "issuedBy": {
+      "en": "—",
+      "te": "—"
+    },
+    "typicalDays": null,
+    "tip": {
+      "en": "Bring the card; this app never asks for the number.",
+      "te": "కార్డు తీసుకెళ్లండి; ఈ యాప్ నంబర్ ఎప్పుడూ అడగదు."
+    }
+  },
+  {
+    "id": "photo",
+    "name": {
+      "en": "Passport-size photo",
+      "te": "పాస్‌పోర్ట్ సైజు ఫోటో"
+    },
+    "issuedBy": {
+      "en": "—",
+      "te": "—"
+    },
+    "typicalDays": null
+  },
+  {
+    "id": "attendance",
+    "name": {
+      "en": "Attendance record ≥ 75%",
+      "te": "75% లేదా అంతకంటే ఎక్కువ హాజరు రికార్డు"
+    },
+    "issuedBy": {
+      "en": "College",
+      "te": "కళాశాల"
+    },
+    "typicalDays": null
+  }
+]

@@ -1,0 +1,643 @@
+[
+  {
+    "id": "ap-pms-rtf",
+    "sector": "education",
+    "state": "AP",
+    "name": {
+      "en": "AP Post Matric Scholarship – Fee Reimbursement (RTF)",
+      "te": "ఏపీ పోస్ట్ మెట్రిక్ స్కాలర్‌షిప్ – ఫీజు రీయింబర్స్‌మెంట్ (RTF)"
+    },
+    "formerNames": [
+      "Jagananna Vidya Deevena"
+    ],
+    "benefit": {
+      "en": "Full fee: tuition, special, other and exam fees. The money is paid to the college.",
+      "te": "పూర్తి ఫీజు: ట్యూషన్, స్పెషల్, ఇతర మరియు పరీక్ష ఫీజులు. డబ్బు కళాశాలకు చెల్లిస్తారు."
+    },
+    "paidTo": "college",
+    "portalName": "Jnanabhumi",
+    "sourceUrl": "https://jnanabhumi.ap.gov.in",
+    "lastVerified": "2026-11-21",
+    "window": {
+      "note": {
+        "en": "Check dates on Jnanabhumi",
+        "te": "తేదీలను జ్ఞానభూమిలో చూడండి"
+      }
+    },
+    "status": "unknown",
+    "rules": [
+      {
+        "field": "category",
+        "op": "in",
+        "value": [
+          "SC",
+          "ST",
+          "BC",
+          "EBC",
+          "Kapu",
+          "Minority"
+        ],
+        "orGroup": "category-or-disability",
+        "label": {
+          "en": "Category: SC, ST, BC, EBC, Kapu or Minority",
+          "te": "వర్గం: ఎస్సీ, ఎస్టీ, బీసీ, ఈబీసీ, కాపు లేదా మైనారిటీ"
+        }
+      },
+      {
+        "field": "disability",
+        "op": "true",
+        "orGroup": "category-or-disability",
+        "label": {
+          "en": "Student is differently abled",
+          "te": "విద్యార్థి దివ్యాంగుడు/దివ్యాంగురాలు"
+        }
+      },
+      {
+        "field": "incomeBand",
+        "op": "in",
+        "value": [
+          "lt1L",
+          "1to2_5L"
+        ],
+        "label": {
+          "en": "Family income is ₹2,50,000 a year or less",
+          "te": "కుటుంబ వార్షిక ఆదాయం ₹2,50,000 లేదా అంతకంటే తక్కువ"
+        }
+      },
+      {
+        "field": "familyAssetRulesOk",
+        "op": "true",
+        "label": {
+          "en": "Family meets the asset conditions: land within limits; no government employee or pensioner; no four-wheeler (taxi, tractor, auto are fine); no income-tax payee",
+          "te": "కుటుంబం ఆస్తి షరతులకు లోబడి ఉంది: భూమి పరిమితిలో; ప్రభుత్వ ఉద్యోగి లేదా పెన్షనర్ లేరు; నాలుగు చక్రాల వాహనం లేదు (టాక్సీ, ట్రాక్టర్, ఆటో పర్వాలేదు); ఆదాయపు పన్ను చెల్లింపుదారు లేరు"
+        }
+      },
+      {
+        "field": "stage",
+        "op": "in",
+        "value": [
+          "iti",
+          "diploma",
+          "ug",
+          "pg",
+          "professional"
+        ],
+        "label": {
+          "en": "Studying ITI, Polytechnic, Degree or above",
+          "te": "ఐటీఐ, పాలిటెక్నిక్, డిగ్రీ లేదా ఆపై కోర్సు చదువుతున్నారు"
+        }
+      },
+      {
+        "field": "collegeType",
+        "op": "eq",
+        "value": "affiliated",
+        "label": {
+          "en": "College is Government, Aided or Private and affiliated to a State University/Board (not a Private/Deemed University, not distance education)",
+          "te": "కళాశాల ప్రభుత్వ, ఎయిడెడ్ లేదా రాష్ట్ర విశ్వవిద్యాలయం/బోర్డుకు అనుబంధంగా ఉన్న ప్రైవేట్ కళాశాల (ప్రైవేట్/డీమ్డ్ విశ్వవిద్యాలయం కాదు, దూరవిద్య కాదు)"
+        }
+      },
+      {
+        "field": "admissionQuota",
+        "op": "eq",
+        "value": "convener",
+        "label": {
+          "en": "Admission through the convener quota (not management or spot admission)",
+          "te": "కన్వీనర్ కోటా ద్వారా ప్రవేశం (మేనేజ్‌మెంట్ లేదా స్పాట్ అడ్మిషన్ కాదు)"
+        }
+      },
+      {
+        "field": "attendance75",
+        "op": "true",
+        "label": {
+          "en": "75% aggregate attendance (needed before money is released)",
+          "te": "75% మొత్తం హాజరు (డబ్బు విడుదలకు తప్పనిసరి)"
+        }
+      }
+    ],
+    "documents": [
+      "income-cert",
+      "caste-cert",
+      "attendance"
+    ],
+    "exclusiveWith": [
+      "in-pm-usp-csss"
+    ],
+    "notStated": [
+      {
+        "en": "Application dates are not stated on the portal.",
+        "te": "దరఖాస్తు తేదీలు పోర్టల్‌లో పేర్కొనలేదు."
+      }
+    ],
+    "applySteps": {
+      "en": [
+        "Check the application dates on the Jnanabhumi portal (jnanabhumi.ap.gov.in)",
+        "Keep the documents on this list ready",
+        "Apply on the Jnanabhumi portal"
+      ],
+      "te": [
+        "జ్ఞానభూమి పోర్టల్‌లో (jnanabhumi.ap.gov.in) దరఖాస్తు తేదీలు చూడండి",
+        "ఈ జాబితాలోని పత్రాలను సిద్ధంగా ఉంచుకోండి",
+        "జ్ఞానభూమి పోర్టల్‌లో దరఖాస్తు చేయండి"
+      ]
+    }
+  },
+  {
+    "id": "ap-pms-mtf",
+    "sector": "education",
+    "state": "AP",
+    "name": {
+      "en": "AP Post Matric Scholarship – Food and Hostel (MTF)",
+      "te": "ఏపీ పోస్ట్ మెట్రిక్ స్కాలర్‌షిప్ – భోజన, వసతి ఖర్చులు (MTF)"
+    },
+    "formerNames": [
+      "Jagananna Vasathi Deevena"
+    ],
+    "benefit": {
+      "en": "Per year: ITI ₹10,000; Polytechnic ₹15,000; Degree and above ₹20,000. Paid to the mother's account (or the natural guardian if the mother is no more or absent).",
+      "te": "సంవత్సరానికి: ఐటీఐ ₹10,000; పాలిటెక్నిక్ ₹15,000; డిగ్రీ మరియు ఆపై ₹20,000. డబ్బు తల్లి ఖాతాకు చెల్లిస్తారు (తల్లి లేకపోతే సహజ సంరక్షకుల ఖాతాకు)."
+    },
+    "paidTo": "mother",
+    "portalName": "Jnanabhumi",
+    "sourceUrl": "https://jnanabhumi.ap.gov.in",
+    "lastVerified": "2026-11-21",
+    "window": {
+      "note": {
+        "en": "Check dates on Jnanabhumi",
+        "te": "తేదీలను జ్ఞానభూమిలో చూడండి"
+      }
+    },
+    "status": "unknown",
+    "rules": [
+      {
+        "field": "category",
+        "op": "in",
+        "value": [
+          "SC",
+          "ST",
+          "BC",
+          "EBC",
+          "Kapu",
+          "Minority"
+        ],
+        "orGroup": "category-or-disability",
+        "label": {
+          "en": "Category: SC, ST, BC, EBC, Kapu or Minority",
+          "te": "వర్గం: ఎస్సీ, ఎస్టీ, బీసీ, ఈబీసీ, కాపు లేదా మైనారిటీ"
+        }
+      },
+      {
+        "field": "disability",
+        "op": "true",
+        "orGroup": "category-or-disability",
+        "label": {
+          "en": "Student is differently abled",
+          "te": "విద్యార్థి దివ్యాంగుడు/దివ్యాంగురాలు"
+        }
+      },
+      {
+        "field": "incomeBand",
+        "op": "in",
+        "value": [
+          "lt1L",
+          "1to2_5L"
+        ],
+        "label": {
+          "en": "Family income is ₹2,50,000 a year or less",
+          "te": "కుటుంబ వార్షిక ఆదాయం ₹2,50,000 లేదా అంతకంటే తక్కువ"
+        }
+      },
+      {
+        "field": "familyAssetRulesOk",
+        "op": "true",
+        "label": {
+          "en": "Family meets the asset conditions: land within limits; no government employee or pensioner; no four-wheeler (taxi, tractor, auto are fine); no income-tax payee",
+          "te": "కుటుంబం ఆస్తి షరతులకు లోబడి ఉంది: భూమి పరిమితిలో; ప్రభుత్వ ఉద్యోగి లేదా పెన్షనర్ లేరు; నాలుగు చక్రాల వాహనం లేదు (టాక్సీ, ట్రాక్టర్, ఆటో పర్వాలేదు); ఆదాయపు పన్ను చెల్లింపుదారు లేరు"
+        }
+      },
+      {
+        "field": "stage",
+        "op": "in",
+        "value": [
+          "iti",
+          "diploma",
+          "ug",
+          "pg",
+          "professional"
+        ],
+        "label": {
+          "en": "Studying ITI, Polytechnic, Degree or above",
+          "te": "ఐటీఐ, పాలిటెక్నిక్, డిగ్రీ లేదా ఆపై కోర్సు చదువుతున్నారు"
+        }
+      },
+      {
+        "field": "collegeType",
+        "op": "eq",
+        "value": "affiliated",
+        "label": {
+          "en": "College is Government, Aided or Private and affiliated to a State University/Board (not a Private/Deemed University, not distance education)",
+          "te": "కళాశాల ప్రభుత్వ, ఎయిడెడ్ లేదా రాష్ట్ర విశ్వవిద్యాలయం/బోర్డుకు అనుబంధంగా ఉన్న ప్రైవేట్ కళాశాల (ప్రైవేట్/డీమ్డ్ విశ్వవిద్యాలయం కాదు, దూరవిద్య కాదు)"
+        }
+      },
+      {
+        "field": "admissionQuota",
+        "op": "eq",
+        "value": "convener",
+        "label": {
+          "en": "Admission through the convener quota (not management or spot admission)",
+          "te": "కన్వీనర్ కోటా ద్వారా ప్రవేశం (మేనేజ్‌మెంట్ లేదా స్పాట్ అడ్మిషన్ కాదు)"
+        }
+      },
+      {
+        "field": "attendance75",
+        "op": "true",
+        "label": {
+          "en": "75% aggregate attendance (needed before money is released)",
+          "te": "75% మొత్తం హాజరు (డబ్బు విడుదలకు తప్పనిసరి)"
+        }
+      }
+    ],
+    "documents": [
+      "income-cert",
+      "caste-cert",
+      "attendance",
+      "bank-seeded"
+    ],
+    "exclusiveWith": [
+      "in-pm-usp-csss"
+    ],
+    "notStated": [
+      {
+        "en": "Application dates are not stated on the portal.",
+        "te": "దరఖాస్తు తేదీలు పోర్టల్‌లో పేర్కొనలేదు."
+      }
+    ],
+    "applySteps": {
+      "en": [
+        "Check the application dates on the Jnanabhumi portal (jnanabhumi.ap.gov.in)",
+        "Keep the documents on this list ready",
+        "Apply on the Jnanabhumi portal"
+      ],
+      "te": [
+        "జ్ఞానభూమి పోర్టల్‌లో (jnanabhumi.ap.gov.in) దరఖాస్తు తేదీలు చూడండి",
+        "ఈ జాబితాలోని పత్రాలను సిద్ధంగా ఉంచుకోండి",
+        "జ్ఞానభూమి పోర్టల్‌లో దరఖాస్తు చేయండి"
+      ]
+    }
+  },
+  {
+    "id": "ap-thalliki-vandanam",
+    "sector": "education",
+    "state": "AP",
+    "name": {
+      "en": "Thalliki Vandanam",
+      "te": "తల్లికి వందనం"
+    },
+    "benefit": {
+      "en": "₹15,000 per year for each eligible child, paid to the mother or guardian, whatever the number of children.",
+      "te": "అర్హులైన ప్రతి బిడ్డకు సంవత్సరానికి ₹15,000, తల్లి లేదా సంరక్షకులకు చెల్లిస్తారు. పిల్లల సంఖ్యతో సంబంధం లేదు."
+    },
+    "paidTo": "mother",
+    "portalName": "Village/Ward Secretariat",
+    "sourceUrl": "https://tirupati.ap.gov.in/intermediate-education/",
+    "lastVerified": "2026-11-21",
+    "window": {
+      "note": {
+        "en": "Check dates at your village/ward secretariat",
+        "te": "తేదీల కోసం మీ గ్రామ/వార్డు సచివాలయంలో అడగండి"
+      }
+    },
+    "status": "unknown",
+    "rules": [
+      {
+        "field": "stage",
+        "op": "in",
+        "value": [
+          "class1to8",
+          "class9to10",
+          "inter"
+        ],
+        "label": {
+          "en": "Child studies in Class 1 to 12 (including Intermediate) in a recognised Government, Aided or Private school or junior college",
+          "te": "బిడ్డ గుర్తింపు పొందిన ప్రభుత్వ, ఎయిడెడ్ లేదా ప్రైవేట్ పాఠశాల/జూనియర్ కళాశాలలో 1 నుండి 12వ తరగతి (ఇంటర్ సహా) చదువుతున్నారు"
+        }
+      },
+      {
+        "field": "childrenInClass1to12",
+        "op": "gte",
+        "value": 1,
+        "label": {
+          "en": "At least one child in Class 1 to 12",
+          "te": "1 నుండి 12వ తరగతిలో కనీసం ఒక బిడ్డ ఉన్నారు"
+        }
+      }
+    ],
+    "documents": [
+      "bank-seeded"
+    ],
+    "notStated": [
+      {
+        "en": "Other conditions: check at your village/ward secretariat.",
+        "te": "ఇతర షరతులు: మీ గ్రామ/వార్డు సచివాలయంలో తెలుసుకోండి."
+      }
+    ],
+    "applySteps": {
+      "en": [
+        "Ask at your village/ward secretariat about the other conditions and how to apply",
+        "Keep the documents on this list ready"
+      ],
+      "te": [
+        "ఇతర షరతులు మరియు దరఖాస్తు విధానం గురించి మీ గ్రామ/వార్డు సచివాలయంలో అడగండి",
+        "ఈ జాబితాలోని పత్రాలను సిద్ధంగా ఉంచుకోండి"
+      ]
+    }
+  },
+  {
+    "id": "ap-prematric",
+    "sector": "education",
+    "state": "AP",
+    "name": {
+      "en": "AP Pre-Matric Scholarship",
+      "te": "ఏపీ ప్రీ-మెట్రిక్ స్కాలర్‌షిప్"
+    },
+    "benefit": {
+      "en": "Amount: check on Jnanabhumi.",
+      "te": "మొత్తం: జ్ఞానభూమిలో చూడండి."
+    },
+    "paidTo": "student",
+    "portalName": "Jnanabhumi",
+    "sourceUrl": "https://jnanabhumi.ap.gov.in",
+    "lastVerified": "2026-11-21",
+    "window": {
+      "note": {
+        "en": "Check dates on Jnanabhumi",
+        "te": "తేదీలను జ్ఞానభూమిలో చూడండి"
+      }
+    },
+    "status": "unknown",
+    "rules": [
+      {
+        "field": "category",
+        "op": "in",
+        "value": [
+          "SC",
+          "ST",
+          "BC"
+        ],
+        "orGroup": "category-or-disability",
+        "label": {
+          "en": "Category: SC, ST or BC",
+          "te": "వర్గం: ఎస్సీ, ఎస్టీ లేదా బీసీ"
+        }
+      },
+      {
+        "field": "disability",
+        "op": "true",
+        "orGroup": "category-or-disability",
+        "label": {
+          "en": "Student is differently abled",
+          "te": "విద్యార్థి దివ్యాంగుడు/దివ్యాంగురాలు"
+        }
+      },
+      {
+        "field": "stage",
+        "op": "in",
+        "value": [
+          "class1to8",
+          "class9to10"
+        ],
+        "label": {
+          "en": "School student in a Government, local body or Government-aided school (SC/ST/disabled: Classes 5 to 10; BC: Classes 9 and 10)",
+          "te": "ప్రభుత్వ, స్థానిక సంస్థ లేదా ప్రభుత్వ సహాయ పాఠశాల విద్యార్థి (ఎస్సీ/ఎస్టీ/దివ్యాంగులు: 5 నుండి 10వ తరగతి; బీసీ: 9, 10వ తరగతి)"
+        }
+      }
+    ],
+    "documents": [
+      "caste-cert"
+    ],
+    "notStated": [
+      {
+        "en": "Income limit and amount are not stated: check on Jnanabhumi.",
+        "te": "ఆదాయ పరిమితి మరియు మొత్తం పేర్కొనలేదు: జ్ఞానభూమిలో చూడండి."
+      },
+      {
+        "en": "Check your exact class: SC/ST/disabled Classes 5 to 10, BC Classes 9 and 10.",
+        "te": "మీ తరగతిని సరిచూసుకోండి: ఎస్సీ/ఎస్టీ/దివ్యాంగులు 5 నుండి 10, బీసీ 9, 10వ తరగతి."
+      }
+    ],
+    "applySteps": {
+      "en": [
+        "Check the application dates on the Jnanabhumi portal (jnanabhumi.ap.gov.in)",
+        "Keep the documents on this list ready",
+        "Apply on the Jnanabhumi portal"
+      ],
+      "te": [
+        "జ్ఞానభూమి పోర్టల్‌లో (jnanabhumi.ap.gov.in) దరఖాస్తు తేదీలు చూడండి",
+        "ఈ జాబితాలోని పత్రాలను సిద్ధంగా ఉంచుకోండి",
+        "జ్ఞానభూమి పోర్టల్‌లో దరఖాస్తు చేయండి"
+      ]
+    }
+  },
+  {
+    "id": "in-pm-usp-csss",
+    "sector": "education",
+    "state": "IN",
+    "name": {
+      "en": "PM-USP Central Sector Scheme of Scholarship for College and University Students",
+      "te": "పీఎం-యూఎస్‌పీ కేంద్ర రంగ స్కాలర్‌షిప్ (కళాశాల మరియు విశ్వవిద్యాలయ విద్యార్థులకు)"
+    },
+    "benefit": {
+      "en": "Per year: UG years 1 to 3 ₹12,000; PG ₹20,000; 4th/5th year of professional or integrated courses ₹20,000. B.Tech/B.E.: ₹12,000 in years 1 to 3 and ₹20,000 in year 4. Renewal needs at least 50% marks and 75% attendance.",
+      "te": "సంవత్సరానికి: యూజీ 1 నుండి 3 సంవత్సరాలు ₹12,000; పీజీ ₹20,000; ప్రొఫెషనల్ లేదా ఇంటిగ్రేటెడ్ కోర్సుల 4/5వ సంవత్సరం ₹20,000. బీటెక్/బీఈ: 1 నుండి 3 సంవత్సరాలు ₹12,000, 4వ సంవత్సరం ₹20,000. రెన్యువల్‌కు కనీసం 50% మార్కులు మరియు 75% హాజరు కావాలి."
+    },
+    "paidTo": "student",
+    "portalName": "National Scholarship Portal (NSP)",
+    "sourceUrl": "https://scholarships.gov.in/public/schemeGuidelines/CSSS_GUIDLINES_06022024.pdf",
+    "lastVerified": "2026-11-21",
+    "window": {
+      "closes": "2026-10-31",
+      "note": {
+        "en": "AY 2026-27: student applications closed on 31-10-2026. Institute verification till 15-11-2026; L2 verification till 30-11-2026.",
+        "te": "2026-27: విద్యార్థుల దరఖాస్తులు 31-10-2026న ముగిశాయి. సంస్థ ధృవీకరణ 15-11-2026 వరకు; L2 ధృవీకరణ 30-11-2026 వరకు."
+      }
+    },
+    "status": "closed",
+    "rules": [
+      {
+        "field": "class12Top20Percent",
+        "op": "true",
+        "label": {
+          "en": "Above the 80th percentile of successful candidates in your stream in Class XII (from your Board)",
+          "te": "12వ తరగతిలో మీ స్ట్రీమ్‌లో ఉత్తీర్ణులలో 80వ పర్సంటైల్ కంటే పైన (మీ బోర్డు నుండి)"
+        }
+      },
+      {
+        "field": "incomeBand",
+        "op": "in",
+        "value": [
+          "lt1L",
+          "1to2_5L",
+          "2_5to4_5L"
+        ],
+        "label": {
+          "en": "Gross family income is ₹4,50,000 a year or less",
+          "te": "కుటుంబ స్థూల వార్షిక ఆదాయం ₹4,50,000 లేదా అంతకంటే తక్కువ"
+        }
+      },
+      {
+        "field": "stage",
+        "op": "in",
+        "value": [
+          "ug",
+          "pg",
+          "professional"
+        ],
+        "label": {
+          "en": "Regular degree course (not a diploma)",
+          "te": "రెగ్యులర్ డిగ్రీ కోర్సు (డిప్లొమా కాదు)"
+        }
+      },
+      {
+        "field": "collegeType",
+        "op": "in",
+        "value": [
+          "affiliated",
+          "private_or_deemed_university"
+        ],
+        "label": {
+          "en": "Regular course, not correspondence or distance",
+          "te": "రెగ్యులర్ కోర్సు, కరస్పాండెన్స్ లేదా దూరవిద్య కాదు"
+        }
+      }
+    ],
+    "documents": [
+      "class12-marks",
+      "income-cert",
+      "bank-seeded"
+    ],
+    "exclusiveWith": [
+      "ap-pms-rtf",
+      "ap-pms-mtf"
+    ],
+    "notStated": [
+      {
+        "en": "The institution must be recognised by AICTE or the relevant regulator: check with your college.",
+        "te": "సంస్థ AICTE లేదా సంబంధిత నియంత్రణ సంస్థ గుర్తింపు పొందినదై ఉండాలి: మీ కళాశాలలో సరిచూసుకోండి."
+      },
+      {
+        "en": "Cannot be combined with any other scholarship, including state scholarships and fee reimbursement.",
+        "te": "ఇతర స్కాలర్‌షిప్‌లతో (రాష్ట్ర స్కాలర్‌షిప్‌లు, ఫీజు రీయింబర్స్‌మెంట్ సహా) కలిపి పొందలేరు."
+      },
+      {
+        "en": "Income certificate is needed for fresh applicants only.",
+        "te": "ఆదాయ ధృవీకరణ పత్రం కొత్త దరఖాస్తుదారులకు మాత్రమే అవసరం."
+      }
+    ],
+    "applySteps": {
+      "en": [
+        "Complete One Time Registration (OTR) on the National Scholarship Portal (scholarships.gov.in). It is mandatory.",
+        "Apply on scholarships.gov.in/Students when the next window opens",
+        "Your institute verifies your application"
+      ],
+      "te": [
+        "నేషనల్ స్కాలర్‌షిప్ పోర్టల్‌లో (scholarships.gov.in) వన్ టైమ్ రిజిస్ట్రేషన్ (OTR) పూర్తి చేయండి. ఇది తప్పనిసరి.",
+        "తదుపరి దరఖాస్తు సమయం ప్రారంభమైనప్పుడు scholarships.gov.in/Students లో దరఖాస్తు చేయండి",
+        "మీ సంస్థ మీ దరఖాస్తును ధృవీకరిస్తుంది"
+      ]
+    }
+  },
+  {
+    "id": "in-aicte-pragati",
+    "sector": "education",
+    "state": "IN",
+    "name": {
+      "en": "AICTE Pragati Scholarship for Girls (technical education)",
+      "te": "ఏఐసీటీఈ ప్రగతి స్కాలర్‌షిప్ (సాంకేతిక విద్యలో బాలికలకు)"
+    },
+    "benefit": {
+      "en": "Amount: check on NSP.",
+      "te": "మొత్తం: NSP లో చూడండి."
+    },
+    "paidTo": "student",
+    "portalName": "National Scholarship Portal (NSP)",
+    "sourceUrl": "https://aicte.gov.in/sites/default/files/pragatisaksham.pdf",
+    "lastVerified": "2026-11-21",
+    "window": {
+      "note": {
+        "en": "Check dates on NSP",
+        "te": "తేదీలను NSP లో చూడండి"
+      }
+    },
+    "status": "unknown",
+    "rules": [
+      {
+        "field": "gender",
+        "op": "eq",
+        "value": "female",
+        "label": {
+          "en": "Girl student",
+          "te": "బాలిక విద్యార్థి"
+        }
+      },
+      {
+        "field": "stage",
+        "op": "in",
+        "value": [
+          "diploma",
+          "ug",
+          "professional"
+        ],
+        "label": {
+          "en": "Technical Degree or Diploma course",
+          "te": "సాంకేతిక డిగ్రీ లేదా డిప్లొమా కోర్సు"
+        }
+      },
+      {
+        "field": "aicteApproved",
+        "op": "true",
+        "label": {
+          "en": "Course is in an AICTE-approved institution",
+          "te": "కోర్సు AICTE గుర్తింపు పొందిన సంస్థలో ఉంది"
+        }
+      },
+      {
+        "field": "girlsInFamilyOnPragati",
+        "op": "lte",
+        "value": 2,
+        "label": {
+          "en": "At most two girls per family",
+          "te": "కుటుంబానికి గరిష్టంగా ఇద్దరు బాలికలు"
+        }
+      }
+    ],
+    "documents": [
+      "income-cert",
+      "bank-seeded"
+    ],
+    "notStated": [
+      {
+        "en": "Family income must be below ₹8,00,000 a year: this app cannot check it, so confirm on NSP.",
+        "te": "కుటుంబ వార్షిక ఆదాయం ₹8,00,000 కంటే తక్కువ ఉండాలి: ఈ యాప్ దీన్ని తనిఖీ చేయలేదు, NSP లో నిర్ధారించుకోండి."
+      },
+      {
+        "en": "For admission to 1st year, or 2nd year through lateral entry: check on NSP.",
+        "te": "1వ సంవత్సరం ప్రవేశానికి లేదా లేటరల్ ఎంట్రీ ద్వారా 2వ సంవత్సరానికి: NSP లో సరిచూసుకోండి."
+      },
+      {
+        "en": "Amount and dates for this year are not confirmed: check on NSP.",
+        "te": "ఈ సంవత్సరం మొత్తం మరియు తేదీలు నిర్ధారించలేదు: NSP లో చూడండి."
+      }
+    ],
+    "applySteps": {
+      "en": [
+        "Check dates and the amount on the National Scholarship Portal (scholarships.gov.in)",
+        "Keep the documents on this list ready",
+        "Apply on NSP"
+      ],
+      "te": [
+        "నేషనల్ స్కాలర్‌షిప్ పోర్టల్‌లో (scholarships.gov.in) తేదీలు మరియు మొత్తం చూడండి",
+        "ఈ జాబితాలోని పత్రాలను సిద్ధంగా ఉంచుకోండి",
+        "NSP లో దరఖాస్తు చేయండి"
+      ]
+    }
+  }
+]
