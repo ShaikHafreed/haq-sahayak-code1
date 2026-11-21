@@ -3,5 +3,21 @@
   "header.langToggle.te": "తెలుగు",
   "header.langToggle.en": "English",
   "footer.privacy": "Privacy",
-  "footer.demoNote": "Demo uses sample user data"
+  "footer.demoNote": "Demo uses sample user data",
+  "landing.hero.promise": "Find the scholarships you can claim — in your language",
+  "landing.hero.cta": "Check my schemes",
+  "landing.how.title": "How it works",
+  "landing.how.step1": "Tell us",
+  "landing.how.step2": "See schemes with reasons",
+  "landing.how.step3": "Get your checklist and deadlines",
+  "landing.sample.title": "Try a sample",
+  "landing.sample.label": "Sample",
+  "landing.sample.lakshmi": "Lakshmi",
+  "landing.sample.ravi": "Ravi",
+  "landing.sample.saroja": "Saroja",
+  "landing.trust.free": "Free",
+  "landing.trust.noAadhaar": "No Aadhaar number asked",
+  "landing.trust.official": "Official link on every scheme",
+  "landing.trust.decision": "Final decision is by the department",
+  "landing.next": "Coming next: Agriculture · Health · Tamil"
 }

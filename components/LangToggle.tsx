@@ -20,8 +20,8 @@ export default function LangToggle() {
             aria-pressed={active}
             className={`min-h-[44px] min-w-[44px] rounded-md px-3 text-sm font-medium border-2 ${
               active
-                ? "bg-primary text-white border-primary"
-                : "bg-white text-primary border-white"
+               ? "bg-white text-primary border-white"
+                : "bg-transparent text-white border-white/60"
             }`}
           >
             {t(`header.langToggle.${code}`, lang)}

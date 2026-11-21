@@ -3,5 +3,21 @@
   "header.langToggle.te": "తెలుగు",
   "header.langToggle.en": "English",
   "footer.privacy": "గోప్యత",
-  "footer.demoNote": "డెమోలో నమూనా వినియోగదారు డేటా ఉపయోగించబడుతుంది"
+  "footer.demoNote": "డెమోలో నమూనా వినియోగదారు డేటా ఉపయోగించబడుతుంది",
+  "landing.hero.promise": "మీరు క్లెయిమ్ చేయగల స్కాలర్‌షిప్‌లను మీ భాషలో కనుగొనండి",
+  "landing.hero.cta": "నా పథకాలు చూసుకోండి",
+  "landing.how.title": "ఇది ఎలా పనిచేస్తుంది",
+  "landing.how.step1": "మాకు చెప్పండి",
+  "landing.how.step2": "కారణాలతో పథకాలు చూడండి",
+  "landing.how.step3": "మీ చెక్‌లిస్ట్, చివరి తేదీలు పొందండి",
+  "landing.sample.title": "నమూనాతో చూడండి",
+  "landing.sample.label": "నమూనా",
+  "landing.sample.lakshmi": "లక్ష్మి",
+  "landing.sample.ravi": "రవి",
+  "landing.sample.saroja": "సరోజ",
+  "landing.trust.free": "ఉచితం",
+  "landing.trust.noAadhaar": "ఆధార్ నంబర్ అడగము",
+  "landing.trust.official": "ప్రతి పథకానికి అధికారిక లింక్",
+  "landing.trust.decision": "తుది నిర్ణయం విభాగానిదే",
+  "landing.next": "త్వరలో: వ్యవసాయం · ఆరోగ్యం · తమిళ్"
 }
