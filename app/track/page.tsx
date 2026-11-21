@@ -11,7 +11,7 @@ import { loadProfile } from "@/lib/storage/profile";
 import type { Profile, Scheme } from "@/lib/types";
 
 const BUTTON =
-  "inline-flex min-h-[44px] items-center justify-center rounded-lg bg-[#0F766E] px-5 py-3 text-base font-semibold text-white";
+  "btn-fill inline-flex min-h-[44px] items-center justify-center rounded-[4px] px-5 py-3 text-base font-semibold leading-[26px]";
 
 export default function TrackPage() {
   const { lang } = useLang();
@@ -28,7 +28,7 @@ export default function TrackPage() {
   if (Object.keys(profile).length === 0) {
     return (
       <div className="flex flex-col gap-4 py-6">
-        <p className="text-base text-slate-700">{t("results.noProfile", lang)}</p>
+        <p className="text-base leading-[26px] text-navy">{t("results.noProfile", lang)}</p>
         <Link href="/check" className={BUTTON}>
           {t("results.startCheck", lang)}
         </Link>
@@ -42,9 +42,9 @@ export default function TrackPage() {
 
   return (
     <div className="flex flex-col gap-6 py-6">
-      <h1 className="text-2xl font-bold text-slate-900">{t("track.title", lang)}</h1>
+      <h1 className="font-display text-[48px] font-normal leading-[52px] text-navy">{t("track.title", lang)}</h1>
       {schemes.length === 0 ? (
-        <p className="text-base text-slate-700">{t("track.none", lang)}</p>
+        <p className="text-base leading-[26px] text-navy">{t("track.none", lang)}</p>
       ) : (
         <TrackerClient schemes={schemes} />
       )}

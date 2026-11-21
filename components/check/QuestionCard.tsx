@@ -18,6 +18,13 @@ type Props<V extends string | number | boolean> = {
 const BUTTON =
   "w-full min-h-[48px] min-w-[44px] rounded-lg border px-4 py-3 text-left text-base font-semibold";
 
+// Decorative check glyph inside the 20px square; shown only when the row is selected.
+const CHECK_ICON = (
+  <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <path d="M2 6.5l2.5 2.5L10 3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 export default function QuestionCard<V extends string | number | boolean>({
   title,
   why,
@@ -30,12 +37,12 @@ export default function QuestionCard<V extends string | number | boolean>({
   const { lang } = useLang();
 
   return (
-    <section aria-labelledby="check-question" className="flex flex-col gap-4">
+    <section aria-labelledby="check-question" className="question-rise flex flex-col gap-4">
       <div className="flex flex-col gap-2">
-        <h2 id="check-question" className="text-xl font-bold text-slate-900">
+        <h2 id="check-question" className="type-section">
           {title}
         </h2>
-        {explanation ? <p className="text-base text-slate-700">{explanation}</p> : null}
+        {explanation ? <p className="text-base leading-[26px] text-slate-700">{explanation}</p> : null}
         {why ? (
           <p className="text-sm text-slate-600">
             {t("check.whyWeAsk", lang)}: {why}
@@ -51,13 +58,10 @@ export default function QuestionCard<V extends string | number | boolean>({
               type="button"
               aria-pressed={isSelected}
               onClick={() => onSelect(option.value)}
-              className={`${BUTTON} ${
-                isSelected
-                  ? "border-[#0F766E] bg-[#0F766E] text-white"
-                  : "border-slate-300 bg-white text-slate-900"
-              }`}
+              className="option-row"
             >
-              {option.label}
+              <span className="option-box">{CHECK_ICON}</span>
+              <span className="min-w-0 flex-1 break-words">{option.label}</span>
             </button>
           );
         })}

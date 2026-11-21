@@ -151,18 +151,19 @@ export default function Wizard() {
   if (!ready) return null;
 
   return (
-    <div className="flex flex-col gap-5 py-6 pb-32 sm:pb-6">
+    <div className="flex flex-col gap-5 py-6 pb-32 leading-[26px] sm:pb-6">
       {isSample ? (
         <span className="self-start rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-900">
           {t("check.sampleBadge", lang)}
         </span>
       ) : null}
-      <h1 className="text-2xl font-bold text-slate-900">{t("check.title", lang)}</h1>
+      <h1 className="type-title">{t("check.title", lang)}</h1>
       <p className="text-base text-slate-600">{t("check.intro", lang)}</p>
       <ProgressBar current={Math.min(step, visible.length)} total={visible.length} />
 
       {key && def ? (
         <QuestionCard
+          key={key}
           title={t(def.titleKey, lang)}
           why={def.whyKey ? t(def.whyKey, lang) : undefined}
           explanation={def.explanationKey ? t(def.explanationKey, lang) : undefined}
@@ -176,18 +177,18 @@ export default function Wizard() {
         />
       ) : (
         <section className="flex flex-col gap-4">
-          <h2 className="text-xl font-bold text-slate-900">{t("check.finalTitle", lang)}</h2>
+          <h2 className="type-section">{t("check.finalTitle", lang)}</h2>
           <p className="text-base text-slate-700">{t("check.finalNote", lang)}</p>
           <Link
             href="/results"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-[#0F766E] px-5 py-3 text-base font-semibold text-white"
+            className="btn-fill inline-flex min-h-[44px] items-center justify-center rounded-lg bg-teal px-5 py-3 text-base font-semibold text-white"
           >
             {t("check.seeSchemes", lang)}
           </Link>
         </section>
       )}
 
-      <div className="sticky bottom-0 z-10 -mx-4 flex flex-col gap-3 border-t border-slate-200 bg-white px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0">
+      <div className="sticky bottom-0 z-10 -mx-4 flex flex-col gap-3 border-t border-slate-200 bg-paper px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0">
         {step > 0 ? (
           <button
             type="button"

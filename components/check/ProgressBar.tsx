@@ -22,7 +22,7 @@ export default function ProgressBar({ current, total }: Props) {
     >
       <div
         className="h-full rounded-full"
-        style={{ width: `${(value / max) * 100}%`, backgroundColor: "#0F766E" }}
+        style={{ width: `${(value / max) * 100}%`, backgroundColor: "var(--color-teal)" }}
       />
     </div>
   );

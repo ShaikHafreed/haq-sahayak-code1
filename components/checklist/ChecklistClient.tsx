@@ -12,7 +12,7 @@ import type { Profile } from "@/lib/types";
 
 const READY_KEY = "haq.ready";
 const BUTTON =
-  "inline-flex min-h-[44px] items-center justify-center rounded-lg bg-[#0F766E] px-5 py-3 text-base font-semibold text-white";
+  "btn-fill inline-flex min-h-[44px] items-center justify-center rounded-[4px] px-5 py-3 text-base font-semibold leading-[26px]";
 
 function saveReady(ids: string[]) {
   try {
@@ -43,7 +43,7 @@ export default function ChecklistClient() {
   if (Object.keys(profile).length === 0) {
     return (
       <div className="flex flex-col gap-4 py-6">
-        <p className="text-base text-slate-700">{t("checklist.noProfile", lang)}</p>
+        <p className="text-base leading-[26px] text-navy">{t("checklist.noProfile", lang)}</p>
         <Link href="/check" className={BUTTON}>
           {t("checklist.checkEligibility", lang)}
         </Link>
@@ -65,7 +65,7 @@ export default function ChecklistClient() {
   return (
     <div className="flex flex-col gap-6 py-6">
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-bold text-slate-900">{t("checklist.title", lang)}</h1>
+        <h1 className="font-display text-[48px] font-normal leading-[52px] text-navy">{t("checklist.title", lang)}</h1>
         <p className="text-lg font-semibold text-teal-800">
           {startDate
             ? `${t("checklist.startBy", lang)}: ${startDate}`
@@ -73,9 +73,9 @@ export default function ChecklistClient() {
         </p>
       </div>
       {items.length === 0 ? (
-        <p className="text-base text-slate-700">{t("checklist.none", lang)}</p>
+        <p className="text-base leading-[26px] text-navy">{t("checklist.none", lang)}</p>
       ) : (
-        <ul className="flex flex-col gap-3 divide-y divide-slate-200">
+        <ul className="flex flex-col gap-3 divide-y divide-ink-3">
           {items.map((item) => (
             <ChecklistItem
               key={item.document.id}

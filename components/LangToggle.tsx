@@ -123,7 +123,7 @@ export default function LangToggle() {
         onClick={onButtonClick}
         onFocus={onButtonFocus}
         onKeyDown={onButtonKeyDown}
-        className="flex h-10 min-w-11 items-center gap-2 rounded border border-navy bg-white px-3 text-sm font-medium text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+        className="flex h-10 min-w-11 items-center gap-2 rounded border border-navy bg-paper px-3 text-sm font-medium text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
       >
         <span>{`${t("lang.label", lang)}: ${t(NAME_KEY[lang] ?? "lang.name.en", lang)}`}</span>
         <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none">

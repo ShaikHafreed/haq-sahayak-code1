@@ -15,7 +15,7 @@
 :root {
   color-scheme: light;
 
-  --color-bg: #ffffff;
+  --color-bg: #F6F3EC;
   --color-text: #1B1A17;
   --color-muted-text: #4b5563;
 
@@ -61,6 +61,7 @@
   --color-ink-2: #4A483F;
   --color-rule: #D9D4C7;
   --color-blue-tint: #DCE5F0;
+  --color-control-border: #8E8A7C;
 }
 
 html {
@@ -147,6 +148,132 @@ textarea:focus-visible,
 @keyframes rise-in {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes question-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Paper pass (PHASE 9.4): type scale, rules, rows, markers ---- */
+.type-title {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  color: var(--color-navy);
+}
+
+.type-section {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 44px;
+  color: var(--color-navy);
+}
+
+.type-numeral {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  color: var(--color-navy);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Section rule: 2px navy line above a group */
+.section-rule {
+  border-top: 2px solid var(--color-navy);
+}
+
+/* Full-width answer row: 56px, white, 1px border; sage on hover; sage + 2px teal when selected */
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 16px;
+  border: 1px solid var(--color-control-border);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--color-ink);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
+}
+
+.option-row:hover {
+  background: var(--color-sage);
+  border-color: var(--color-teal);
+}
+
+.option-row[aria-pressed="true"] {
+  background: var(--color-sage);
+  border: 2px solid var(--color-teal);
+  padding: 0 15px;
+}
+
+/* 20px square checkbox; the check glyph only shows when selected */
+.option-box {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-control-border);
+  border-radius: 2px;
+  background: #ffffff;
+  color: #ffffff;
+}
+
+.option-box svg {
+  opacity: 0;
+}
+
+.option-row[aria-pressed="true"] .option-box {
+  background: var(--color-teal);
+  border-color: var(--color-teal);
+}
+
+.option-row[aria-pressed="true"] .option-box svg {
+  opacity: 1;
+}
+
+/* Square status marker (text carries the meaning; the square is decoration) */
+.status-marker {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+}
+
+.status-met {
+  background: var(--color-teal);
+  color: #ffffff;
+}
+
+.status-check {
+  background: var(--color-marigold-tint);
+  border: 1px solid var(--color-marigold-deep);
+  color: var(--color-marigold-deep);
+}
+
+.status-no {
+  background: var(--color-ink-3);
+  color: #ffffff;
+}
+
+/* Question text rises in 240ms each time the question changes */
+.question-rise {
+  animation: question-rise 240ms ease-out both;
 }
 
 /* Italic word with a marigold highlight that sweeps in once */
@@ -236,7 +363,8 @@ textarea:focus-visible,
 
 @media (prefers-reduced-motion: reduce) {
   .claim::before,
-  .rise {
+  .rise,
+  .question-rise {
     animation: none;
   }
 

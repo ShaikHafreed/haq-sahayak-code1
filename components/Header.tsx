@@ -13,7 +13,7 @@ const NAV_LINKS = [
 export default function Header() {
   const { lang } = useLang();
   return (
-    <header className="border-b border-navy bg-white">
+    <header className="border-b border-navy bg-paper">
       <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-3 sm:h-20 sm:flex-row sm:items-center sm:gap-6 sm:py-0">
         <div className="flex items-center justify-between gap-3 sm:contents">
           <Link href="/" className="flex items-center gap-3 sm:order-1">

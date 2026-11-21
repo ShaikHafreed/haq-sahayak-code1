@@ -27,13 +27,13 @@ export default function ChecklistItem({ item, checked, onToggle, lang }: Props) 
           onChange={() => onToggle(d.id)}
         />
         <span className="flex min-w-0 flex-1 flex-col gap-1 break-words">
-          <span className={`text-base font-semibold text-slate-900 ${checked ? "line-through" : ""}`}>
+          <span className={`text-base font-semibold leading-[26px] text-navy ${checked ? "line-through" : ""}`}>
             {pick(d.name, lang)}
           </span>
-          <span className="text-sm text-slate-700">
+          <span className="text-base leading-[26px] text-navy">
             {t("checklist.why", lang)}: {names}
           </span>
-          <span className="text-sm text-slate-600">
+          <span className="text-base leading-[26px] text-ink-3">
             {d.typicalDays === null
               ? t("checklist.untimed", lang)
               : `${t("checklist.days", lang)}: ${String(d.typicalDays)}`}
