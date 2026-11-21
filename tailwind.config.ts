@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-noto-sans)", "var(--font-noto-telugu)", "var(--font-noto-tamil)", "sans-serif"],
+        sans: ["var(--font-inter)", "var(--font-noto-telugu)", "var(--font-noto-tamil)", "sans-serif"],
       },
       colors: {
         primary: {

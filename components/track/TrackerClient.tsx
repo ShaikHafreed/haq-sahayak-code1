@@ -42,9 +42,9 @@ export default function TrackerClient({ schemes }: Props) {
           <section key={scheme.id} className="flex flex-col gap-3 rounded-xl border border-slate-200 p-4">
             <h2 className="text-lg font-bold text-slate-900">{pick(scheme.name, lang)}</h2>
             {Number.isNaN(days) ? null : days < 0 ? (
-              <p className="text-sm font-semibold text-red-700">{t("track.closed", lang)}</p>
+              <p className="text-base font-semibold text-[var(--color-not-eligible-text)]">{t("track.closed", lang)}</p>
             ) : (
-              <p className="text-sm font-semibold text-teal-800">
+              <p className="text-base font-semibold text-[var(--color-primary)]">
                 {days} {t("track.daysLeft", lang)}
               </p>
             )}

@@ -2,13 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Palette. Contrast on white (#ffffff) was checked for every text colour:
+ *   --color-likely-text   #15733a  ~5.9:1
+ *   --color-check-text    #8a5a00  ~5.9:1  (darkened from amber so it passes 4.5:1)
+ *   --color-neutral-text  #4b5563  ~7.5:1  (not-eligible; grey, never red)
+ *   --color-paused-text   #5f6368  ~6.0:1
+ *   --color-primary       #0f5257  ~9:1
+ *   --color-body-text     #1a1a1a  ~17:1
+ * Never use red for "not eligible".
+ */
 :root {
   color-scheme: light;
+
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted-text: #4b5563;
+
+  --color-primary: #0f5257;
+  --color-primary-text: #ffffff;
+  --color-accent: #9a3412;
+
+  --color-likely: #15733a;
+  --color-likely-bg: #e8f5ec;
+  --color-likely-text: #15733a;
+
+  --color-check: #8a5a00;
+  --color-check-bg: #fdf3dc;
+  --color-check-text: #8a5a00;
+
+  --color-not-eligible: #4b5563;
+  --color-not-eligible-bg: #eef0f3;
+  --color-not-eligible-text: #4b5563;
+
+  --color-paused: #5f6368;
+  --color-paused-bg: #f3f4f6;
+  --color-paused-text: #5f6368;
+
+  --color-border: #d1d5db;
+  --color-focus: #0f5257;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: #ffffff;
-  color: #1a1a1a;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Telugu: Noto Sans Telugu from layout.tsx, taller line-height for conjuncts/matras */
+:lang(te) {
+  font-family: var(--font-noto-telugu), var(--font-inter), sans-serif;
+  line-height: 1.7;
+}
+
+/* Keep flex/grid children from forcing horizontal scroll on 360px screens */
+main :where(*) {
+  min-width: 0;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tap targets: at least 44px tall */
+button,
+[role="button"],
+select,
+input:not([type="checkbox"]):not([type="radio"]),
+.chip {
+  min-height: 44px;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+.chip:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 @media print {

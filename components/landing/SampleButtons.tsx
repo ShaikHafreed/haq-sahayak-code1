@@ -15,7 +15,7 @@ export default function SampleButtons() {
 
   return (
     <section aria-labelledby="sample-title" className="flex flex-col gap-3">
-      <h2 id="sample-title" className="text-lg font-bold text-slate-900">
+      <h2 id="sample-title" className="text-base font-semibold text-[var(--color-muted-text)]">
         {t("landing.sample.title", lang)}
       </h2>
       <div className="flex flex-col gap-3">
@@ -23,7 +23,7 @@ export default function SampleButtons() {
           <Link
             key={sample.persona}
             href={`/check?persona=${sample.persona}`}
-            className="flex min-h-[44px] items-center justify-center rounded-lg border border-primary px-4 py-3 text-base font-semibold text-primary"
+            className="flex min-h-[44px] items-center justify-center rounded-lg border border-[var(--color-border)] bg-white px-4 py-2 text-base font-medium text-[var(--color-primary)]"
           >
             {t("landing.sample.label", lang)} {t(sample.nameKey, lang)}
           </Link>

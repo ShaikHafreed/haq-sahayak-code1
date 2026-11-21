@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Noto_Sans, Noto_Sans_Telugu, Noto_Sans_Tamil } from "next/font/google";
+import { Inter, Noto_Sans_Telugu, Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { LangProvider } from "../lib/i18n/LangProvider";
 
-const notoSans = Noto_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   display: "swap",
-  variable: "--font-noto-sans",
+  variable: "--font-inter",
 });
 
 const notoTelugu = Noto_Sans_Telugu({
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="te" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${notoSans.variable} ${notoTelugu.variable} ${notoTamil.variable} font-sans flex min-h-screen flex-col`}
+        className={`${inter.variable} ${notoTelugu.variable} ${notoTamil.variable} font-sans flex min-h-screen flex-col`}
       >
         <LangProvider>
           <Header />
