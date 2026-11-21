@@ -47,13 +47,15 @@ Admin (edit scheme rules as data) · Privacy · About
 | Route | Screen | Purpose |
 |---|---|---|
 | `/` | Landing | Explain in 5 seconds, start check, language toggle, sample persona buttons |
-| `/check` | Intake | Plain-language text box (+ mic later) and tap-chip questions |
+| `/check` | Intake | Tap-chip questions |
 | `/results` | Results | Scheme cards grouped by status, reasons per rule |
 | `/scheme/[id]` | Scheme detail | Benefit, rules, documents, apply steps, official link, last verified |
 | `/checklist` | Checklist | De-duplicated documents across matched schemes with start-by dates |
 | `/tracker` | My applications | Status per scheme, reminders, defect fix steps |
 | `/admin` | Admin | Edit scheme rules/dates/sources in the browser, re-run, export JSON |
 | `/privacy` | Privacy | What we store (nothing on a server), delete my data |
+
+Free-text box: deferred to Phase 10, optional. Not in the current build.
 
 ## 5. Tech stack (keep it small)
 

@@ -6,12 +6,12 @@ import TrustStrip from "../components/landing/TrustStrip";
 
 export default function LandingPage() {
   return (
-    <main className="mx-auto flex max-w-md flex-col gap-8 px-4 pb-10">
+    <div className="mx-auto flex max-w-md flex-col gap-8 px-4 pb-10">
       <Hero />
       <HowItWorks />
       <SampleButtons />
       <TrustStrip />
       <ComingNext />
-    </main>
+    </div>
   );
 }

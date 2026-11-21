@@ -33,8 +33,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="te">
+    <html lang="te" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${notoSans.variable} ${notoTelugu.variable} ${notoTamil.variable} font-sans flex min-h-screen flex-col`}
       >
         <LangProvider>

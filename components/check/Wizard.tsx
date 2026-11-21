@@ -65,12 +65,12 @@ const DEFS: Record<QuestionKey, RawDef> = {
   childrenInClass1to12: {
     titleKey: "check.q.children",
     whyKey: "check.q.children.why",
-    options: [0, 1, 2, 3, 4].map((v) => ({ value: v, labelKey: v === 4 ? "check.opt.gte4" : undefined })),
+    options: [0, 1, 2, 3, 4].map((v) => ({ value: v, labelKey: v === 4 ? "check.opt.gte4" : `check.opt.n${v}` })),
   },
   girlsInFamilyOnPragati: {
     titleKey: "check.q.girls",
     whyKey: "check.q.girls.why",
-    options: [1, 2, 3].map((v) => ({ value: v, labelKey: v === 3 ? "check.opt.gte3" : undefined })),
+    options: [1, 2, 3].map((v) => ({ value: v, labelKey: v === 3 ? "check.opt.gte3" : `check.opt.g${v}` })),
   },
   residence: { titleKey: "check.q.residence", options: opts(["day", "hostel"]) },
   collegeType: {
