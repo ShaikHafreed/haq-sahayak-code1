@@ -149,5 +149,16 @@
   "detail.timeVaries": "సమయం మారుతుంది",
   "detail.daysPrefix": "సుమారు",
   "detail.daysSuffix": "రోజులు",
-  "detail.applySteps": "ఎలా దరఖాస్తు చేయాలి"
+  "detail.applySteps": "ఎలా దరఖాస్తు చేయాలి",
+  "checklist.title": "ఏమి సేకరించాలి",
+  "checklist.noProfile": "ఇంకా జవాబులు సేవ్ కాలేదు. చెక్‌లిస్ట్ చూడటానికి ముందుగా కొన్ని ప్రశ్నలకు జవాబు ఇవ్వండి.",
+  "checklist.checkEligibility": "ప్రశ్నలకు జవాబు ఇవ్వండి",
+  "checklist.startBy": "ఈ తేదీలోపు మొదలుపెట్టండి",
+  "checklist.startEarly": "ఇప్పుడే పత్రాలు సేకరించడం మొదలుపెట్టండి.",
+  "checklist.why": "ఎందుకు కావాలి",
+  "checklist.days": "సాధారణంగా పట్టే రోజులు",
+  "checklist.print": "ముద్రించు",
+  "checklist.linkLabel": "నా చెక్‌లిస్ట్ చూడండి",
+  "checklist.untimed": "సమయం మారుతుంది",
+  "checklist.none": "ప్రస్తుతం చూపించడానికి పత్రాలు లేవు."
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { t, type Lang } from "@/lib/i18n";
 import { useLang } from "@/lib/i18n/LangProvider";
 import type { Bilingual, DocumentType, Scheme } from "@/lib/types";
@@ -81,6 +82,10 @@ export default function SchemeDetail({ scheme, documents }: Props) {
           {t("card.officialSource", lang)}
         </a>
       </section>
+
+      <Link href="/checklist" className={LINK_CLASS}>
+        {t("checklist.linkLabel", lang)}
+      </Link>
 
       <p className="text-sm text-slate-600">{t("results.decision", lang)}</p>
     </div>

@@ -10,3 +10,16 @@ body {
   background: #ffffff;
   color: #1a1a1a;
 }
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+}

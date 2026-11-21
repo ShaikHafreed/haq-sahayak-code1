@@ -149,5 +149,16 @@
   "detail.timeVaries": "Time varies",
   "detail.daysPrefix": "about",
   "detail.daysSuffix": "days",
-  "detail.applySteps": "How to apply"
+  "detail.applySteps": "How to apply",
+  "checklist.title": "What to collect",
+  "checklist.noProfile": "No answers saved yet. Answer a few questions to see your checklist.",
+  "checklist.checkEligibility": "Answer the questions",
+  "checklist.startBy": "Start by",
+  "checklist.startEarly": "Start collecting documents now.",
+  "checklist.why": "Needed for",
+  "checklist.days": "Typical time (days)",
+  "checklist.print": "Print",
+  "checklist.linkLabel": "Open my checklist",
+  "checklist.untimed": "Time varies",
+  "checklist.none": "No documents yet for schemes marked likely eligible or check needed."
 }

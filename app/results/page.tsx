@@ -74,6 +74,9 @@ export default function ResultsPage() {
   return (
     <div className="flex flex-col gap-8 py-6">
       <h1 className="text-2xl font-bold text-slate-900">{t("results.title", lang)}</h1>
+      <Link href="/checklist" className="text-base font-semibold text-teal-800 underline">
+        {t("checklist.linkLabel", lang)}
+      </Link>
       <Section title={t("results.group.likely", lang)} items={groups.likely} renderItem={renderItem} />
       <Section title={t("results.group.check", lang)} items={groups.check} renderItem={renderItem} />
       <Section
