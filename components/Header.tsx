@@ -9,8 +9,8 @@ export default function Header() {
 
   return (
     <header className="bg-primary text-white">
-      <div className="mx-auto flex max-w-md items-center justify-between gap-3 px-4 py-2">
-        <span className="text-lg font-bold">{t("app.name", lang)}</span>
+      <div className="mx-auto flex max-w-md items-center justify-between gap-2 px-4 py-2 sm:gap-3">
+        <span className="min-w-0 truncate text-lg font-bold">{t("app.name", lang)}</span>
         <LangToggle />
       </div>
     </header>

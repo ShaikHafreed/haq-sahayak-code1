@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans_Telugu, Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
@@ -29,6 +29,10 @@ const notoTamil = Noto_Sans_Tamil({
 export const metadata: Metadata = {
   title: "Haq Sahayak",
   description: "Demo uses sample user data",
+};
+
+export const viewport: Viewport = {
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

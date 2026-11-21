@@ -75,7 +75,7 @@ export default function ChecklistClient() {
       {items.length === 0 ? (
         <p className="text-base text-slate-700">{t("checklist.none", lang)}</p>
       ) : (
-        <ul className="flex flex-col gap-2 divide-y divide-slate-200">
+        <ul className="flex flex-col gap-3 divide-y divide-slate-200">
           {items.map((item) => (
             <ChecklistItem
               key={item.document.id}

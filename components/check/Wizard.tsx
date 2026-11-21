@@ -151,7 +151,7 @@ export default function Wizard() {
   if (!ready) return null;
 
   return (
-    <div className="flex flex-col gap-5 py-6">
+    <div className="flex flex-col gap-5 py-6 pb-32 sm:pb-6">
       {isSample ? (
         <span className="self-start rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-900">
           {t("check.sampleBadge", lang)}
@@ -187,7 +187,7 @@ export default function Wizard() {
         </section>
       )}
 
-      <div className="flex flex-col gap-3">
+      <div className="sticky bottom-0 z-10 -mx-4 flex flex-col gap-3 border-t border-slate-200 bg-white px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0">
         {step > 0 ? (
           <button
             type="button"

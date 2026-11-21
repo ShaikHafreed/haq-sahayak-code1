@@ -19,14 +19,14 @@ export default function ChecklistItem({ item, checked, onToggle, lang }: Props) 
 
   return (
     <li className="flex flex-col">
-      <label className="flex min-h-[44px] cursor-pointer items-start gap-3 py-2">
+      <label className="flex min-h-[48px] w-full min-w-0 cursor-pointer items-start gap-3 py-2">
         <input
           type="checkbox"
           className="mt-1 h-5 w-5 shrink-0"
           checked={checked}
           onChange={() => onToggle(d.id)}
         />
-        <span className="flex flex-col gap-1">
+        <span className="flex min-w-0 flex-1 flex-col gap-1 break-words">
           <span className={`text-base font-semibold text-slate-900 ${checked ? "line-through" : ""}`}>
             {pick(d.name, lang)}
           </span>

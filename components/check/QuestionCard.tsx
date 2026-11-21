@@ -16,7 +16,7 @@ type Props<V extends string | number | boolean> = {
 };
 
 const BUTTON =
-  "w-full min-h-[44px] min-w-[44px] rounded-lg border px-4 py-3 text-left text-base font-semibold";
+  "w-full min-h-[48px] min-w-[44px] rounded-lg border px-4 py-3 text-left text-base font-semibold";
 
 export default function QuestionCard<V extends string | number | boolean>({
   title,

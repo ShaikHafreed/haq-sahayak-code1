@@ -12,6 +12,8 @@ type Status = TrackedApplication["status"];
 const STATUSES: Status[] = ["not_started", "applied", "approved", "rejected"];
 const FIELD =
   "min-h-[44px] w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900";
+const SELECT_FIELD =
+  "min-h-[48px] w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900";
 const pick = (b: Bilingual, lang: Lang) => b[lang] || b.en;
 
 export default function TrackerClient({ schemes }: Props) {
@@ -51,7 +53,7 @@ export default function TrackerClient({ schemes }: Props) {
             <label className="flex flex-col gap-1 text-sm font-semibold text-slate-700">
               {t("track.statusLabel", lang)}
               <select
-                className={FIELD}
+                className={SELECT_FIELD}
                 value={entry.status}
                 onChange={(e) => update(scheme, { status: e.target.value as Status })}
               >

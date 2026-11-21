@@ -74,6 +74,13 @@ canvas {
   height: auto;
 }
 
+/* Form controls: 16px minimum so iOS does not zoom on focus */
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
+
 /* Tap targets: at least 44px tall */
 button,
 [role="button"],
