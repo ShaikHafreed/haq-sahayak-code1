@@ -1,9 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans_Telugu, Noto_Sans_Tamil } from "next/font/google";
+import { Inter, Noto_Sans_Telugu, Noto_Sans_Tamil, Newsreader, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { LangProvider } from "../lib/i18n/LangProvider";
+import TopStrip from "../components/TopStrip";
+import { getSchemes } from "../lib/data";
+import { latestLastVerified, formatCheckedDate } from "../lib/scheme-date";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +29,9 @@ const notoTamil = Noto_Sans_Tamil({
   variable: "--font-noto-tamil",
 });
 
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["500", "600"], display: "swap", variable: "--font-newsreader" });
+const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], display: "swap", variable: "--font-plex-mono" });
+
 export const metadata: Metadata = {
   title: "Haq Sahayak",
   description: "Demo uses sample user data",
@@ -36,13 +42,15 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const checkedDate = formatCheckedDate(latestLastVerified(getSchemes()));
   return (
     <html lang="te" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${notoTelugu.variable} ${notoTamil.variable} font-sans flex min-h-screen flex-col`}
+        className={`${inter.variable} ${notoTelugu.variable} ${notoTamil.variable} ${newsreader.variable} ${plexMono.variable} font-sans flex min-h-screen flex-col`}
       >
         <LangProvider>
+          <TopStrip checkedDate={checkedDate} />
           <Header />
           <main className="min-h-screen max-w-md mx-auto px-4">{children}</main>
           <Footer />

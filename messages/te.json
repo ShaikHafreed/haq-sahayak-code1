@@ -173,5 +173,20 @@
   "track.note": "గమనిక",
   "track.daysLeft": "రోజులు మిగిలి ఉన్నాయి",
   "track.closed": "మూసివేయబడింది",
-  "track.noteHint": "ఇక్కడ ఆధార్, బ్యాంకు ఖాతా లేదా రేషన్ కార్డు నంబర్లు టైప్ చేయవద్దు."
+  "track.noteHint": "ఇక్కడ ఆధార్, బ్యాంకు ఖాతా లేదా రేషన్ కార్డు నంబర్లు టైప్ చేయవద్దు.",
+  "brand.haq": "Haq",
+  "brand.sahayak": "SAHAYAK",
+  "topStrip.tagline": "ఆంధ్రప్రదేశ్ విద్యా పథకాలకు ఒక స్వతంత్ర మార్గదర్శి. ఇది ప్రభుత్వ వెబ్‌సైట్ కాదు.",
+  "topStrip.dataChecked": "డేటా తనిఖీ చేయబడింది",
+  "nav.label": "ప్రధాన నావిగేషన్",
+  "nav.eligibility": "అర్హత తనిఖీ",
+  "nav.checklist": "చెక్‌లిస్ట్",
+  "nav.tracker": "ట్రాకర్",
+  "lang.label": "భాష",
+  "lang.menuTitle": "అందుబాటులో ఉన్న భాషలు",
+  "lang.name.te": "తెలుగు",
+  "lang.name.en": "English",
+  "lang.sub.te": "Telugu",
+  "footer.terms": "నిబంధనలు",
+  "footer.disclaimer": "ఇది స్వతంత్ర ప్రాజెక్ట్. ఆంధ్రప్రదేశ్ ప్రభుత్వంతో ఇది అనుబంధం కాదు."
 }

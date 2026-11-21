@@ -173,5 +173,20 @@
   "track.note": "Note",
   "track.daysLeft": "days left",
   "track.closed": "closed",
-  "track.noteHint": "Do not type Aadhaar, bank account or ration card numbers here."
+  "track.noteHint": "Do not type Aadhaar, bank account or ration card numbers here.",
+  "brand.haq": "Haq",
+  "brand.sahayak": "SAHAYAK",
+  "topStrip.tagline": "An independent guide to Andhra Pradesh education schemes. Not a government website.",
+  "topStrip.dataChecked": "Data checked",
+  "nav.label": "Main navigation",
+  "nav.eligibility": "Check eligibility",
+  "nav.checklist": "Checklist",
+  "nav.tracker": "Tracker",
+  "lang.label": "Language",
+  "lang.menuTitle": "Available languages",
+  "lang.name.te": "తెలుగు",
+  "lang.name.en": "English",
+  "lang.sub.te": "Telugu",
+  "footer.terms": "Terms",
+  "footer.disclaimer": "Independent project. Not affiliated with the Government of Andhra Pradesh."
 }

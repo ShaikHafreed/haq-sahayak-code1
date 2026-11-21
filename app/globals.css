@@ -8,18 +8,18 @@
  *   --color-check-text    #8a5a00  ~5.9:1  (darkened from amber so it passes 4.5:1)
  *   --color-neutral-text  #4b5563  ~7.5:1  (not-eligible; grey, never red)
  *   --color-paused-text   #5f6368  ~6.0:1
- *   --color-primary       #0f5257  ~9:1
- *   --color-body-text     #1a1a1a  ~17:1
+ *   --color-primary       #0B5D4B  ~9:1
+ *   --color-body-text     #1B1A17  ~17:1
  * Never use red for "not eligible".
  */
 :root {
   color-scheme: light;
 
   --color-bg: #ffffff;
-  --color-text: #1a1a1a;
+  --color-text: #1B1A17;
   --color-muted-text: #4b5563;
 
-  --color-primary: #0f5257;
+  --color-primary: #0B5D4B;
   --color-primary-text: #ffffff;
   --color-accent: #9a3412;
 
@@ -40,7 +40,27 @@
   --color-paused-text: #5f6368;
 
   --color-border: #d1d5db;
-  --color-focus: #0f5257;
+  --color-focus: #0B5D4B;
+
+  --color-navy: #14304F;
+  --color-marigold: #E8A317;
+  --color-cream: #EFE8D6;
+  --color-ink: #1B1A17;
+  --color-ink-3: #6B685D;
+  --color-sage: #E3EFE8;
+  --color-paper: #F6F3EC;
+  --color-strip-text: #DCE5F0;
+  --color-teal: #0B5D4B;
+  --color-teal-dark: #08463A;
+  --color-teal-deeper: #063A30;
+  --color-marigold-soft: #F2C65A;
+  --color-grid: #E3DAC2;
+  --color-sage-2: #DCE9E0;
+  --color-marigold-tint: #FAEFD2;
+  --color-marigold-deep: #7A4D08;
+  --color-ink-2: #4A483F;
+  --color-rule: #D9D4C7;
+  --color-blue-tint: #DCE5F0;
 }
 
 html {
