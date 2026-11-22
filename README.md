@@ -1,117 +1,64 @@
-# Haq Sahayak — "Claim What's Yours"
+# Haq Sahayak: "Claim What's Yours"
 
-A plain-language eligibility matcher for government education schemes in Andhra Pradesh,
-in **Telugu and English**.
+A plain-language eligibility checker for Andhra Pradesh education schemes, in Telugu and English.
 
-A student or parent answers a few simple questions. The app tells them which scholarships
-they are likely eligible for, **why**, which documents to start collecting, and when to start.
+Live site: https://haq-sahayak.vercel.app
 
 Built for Codebenders ACE Builders 2026, Problem Statement 5.
 
----
-
 ## The problem
 
-Scholarship money goes unclaimed every year — not because families are ineligible, but because
-nobody tells them in a language they read, in words they understand, that they qualify.
-Portals are in English, written in scheme-speak, and never say *"you, specifically, can apply for this."*
+Scheme rules are long, scattered across several portals, and hard to read. Many families do not know which education schemes they can claim, so money and support go unclaimed.
 
 ## What it does
 
-1. **Answers, not forms.** One question per screen, with "Not sure" on every single question.
-   Nothing is mandatory.
-2. **A verdict with reasons.** Each scheme comes back as *likely eligible*, *needs checking*, or
-   *not eligible*, and every verdict lists the rules that produced it.
-3. **A document checklist.** Merges the documents needed across all matching schemes, sorted by how
-   long each one takes to obtain, with tick boxes and a print view.
-4. **A tracker.** Record what was applied for and when, so nothing is forgotten mid-deadline.
+A student or parent answers a few simple questions, one at a time. Every question can be skipped. The app then shows:
 
-## Real data only
+- which schemes the family is likely eligible for
+- which schemes are closed or paused
+- every rule of each scheme, and whether the answers meet it
+- the official source link and the date the scheme was last verified
 
-Every scheme fact in this app comes from an official source and is recorded with the date it was
-checked. **Nothing is generated or guessed.**
+A checklist and a tracker help the family follow up on the official portal.
 
-Where an official portal does not state something, the app shows "Check on official portal"
-rather than inventing an answer. Scheme statuses are marked `unknown` unless the portal states
-otherwise.
+## How it works
 
-The six schemes in v1:
+- Eligibility is decided by a rule engine that follows each scheme's published rules. AI does not decide eligibility.
+- Scheme data lives in `data/schemes.json`. Each scheme carries its source link and a verified date.
+- There are no accounts. Answers stay on the device in local storage. A "Clear my data" button removes them.
+- The interface is available in Telugu and English.
 
-| Scheme | Level |
-|---|---|
-| AP Post Matric Scholarship — Reimbursement of Tuition Fee (RTF) | State |
-| AP Post Matric Scholarship — Maintenance / Mess & Hostel (MTF) | State |
-| Thalliki Vandanam | State |
-| AP Pre-Matric Scholarship | State |
-| PM-USP Central Sector Scheme of Scholarship (CSSS) | Central |
-| AICTE Pragati Scholarship for Girls | Central |
+## Schemes covered (v1)
 
-Only the **sample personas** (Lakshmi, Ravi, Saroja) are synthetic, and they are labelled
-"Sample" everywhere they appear.
+- AP Post Matric Scholarship, Fee Reimbursement (RTF)
+- AP Post Matric Scholarship, Food and Hostel (MTF)
+- Thalliki Vandanam
+- AP Pre-Matric Scholarship
+- PM-USP Central Sector Scheme of Scholarship for College and University Students
+- AICTE Pragati Scholarship for Girls (technical education)
 
-## Privacy
+Scheme status on the site is checked against the official sources listed on each scheme page. Final decisions are always taken by the department.
 
-- **Nothing leaves the device.** No accounts, no server, no analytics. Answers live in the
-  browser's own storage and a "Clear my data" button wipes them.
-- **ID numbers are stripped before storage.** Free-text notes pass through a masking function
-  that removes Aadhaar-style and other long digit sequences, so an ID typed by mistake is never
-  written to storage.
+## Honest notes
 
-## Eligibility is rules, not AI
-
-Eligibility is decided by a pure, auditable rule engine — plain data in `data/schemes.json`,
-evaluated in `lib/engine/`. There is no model in the decision path, so every verdict can be
-traced to a rule and explained to the person it affects.
-
-Rules combine with AND. Rules sharing an `orGroup` form an OR-group: the group passes if any
-rule passes, and only fails if all of them fail. Anything unresolved stays *unknown* rather than
-being resolved to a guess.
+- Sample students shown in the app (for example "Sample Lakshmi") are made up and labelled as samples.
+- This is an independent project. It is not affiliated with the Government of Andhra Pradesh.
+- Telugu text should be reviewed by a native speaker. Some landing-page text still appears in English when Telugu is selected.
+- Planned next: a results view with answers-used chips and a rule-by-rule comparison table.
 
 ## Tech
 
-Next.js 15 (App Router) · TypeScript · Tailwind CSS · Vitest
-Custom lightweight i18n (`t(key, lang)`), no i18n dependency.
+Next.js 15 (App Router), TypeScript, Tailwind CSS, Vitest. Deployed on Vercel.
 
-## Run it
+## Run locally
 
-```bash
+```
 npm install
-npm run dev -- -p 3005
+npm run dev
 ```
 
-Then open http://localhost:3005
+Run the tests with `npm test`.
 
-```bash
-npm test          # unit tests for the engine, checklist, tracker and masking
-npm run build     # production build
-```
+## Author
 
-## Structure
-
-```
-app/              routes: /, /check, /results, /scheme/[id], /checklist, /track
-components/       UI per route
-lib/types.ts      all shared types
-lib/engine/       eligibility evaluation, start-by dates, conflicts, grouping
-lib/data/         loaders for the scheme and document data
-lib/storage/      browser storage for profile, checklist and tracker
-lib/privacy/      ID masking
-data/             schemes.json and documents.json — the real, sourced data
-messages/         en.json, te.json
-tests/            Vitest suites
-```
-
-## Scope of v1
-
-Education schemes, Andhra Pradesh, Telugu and English.
-
-The data model is sector- and state-agnostic, so agriculture and health schemes, and other
-states and languages, are additions to the data rather than rewrites of the code.
-
-## Known limits
-
-- Telugu strings are a first draft and need a native speaker's review before real use.
-- Document processing times are only recorded where an official source states them; the rest are
-  left blank rather than estimated.
-- Scheme open/closed status is `unknown` unless the portal states it, so the app points users to
-  the official portal to confirm.
+Shaik Hafreed, solo builder.
